@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nukemup</title>
+    <style>
+        body {
+            margin: 10vh 1vw;
+            background-color: black;
+            cursor: none;
+        }
+        canvas {
+            width: 98vw;
+            height: 73.5vh;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="c" width="600" height="450"></canvas>
+    <script src="rbush.js"></script>
+    <script src="game.js"></script>
+    <script src="main.js"></script>
+    <script>
+        window.addEventListener("contextmenu", e => e.preventDefault());
+        c.requestPointerLock = c.requestPointerLock || c.mozRequestPointerLock;
+        document.exitPointerLock = document.exitPointerLock || document.mozExitPointerLock;
+        // c.onclick = function() {
+        //     c.requestPointerLock()
+        // }
+        let ctx = c.getContext('2d')
+        document.addEventListener("DOMContentLoaded", main)
+    </script>
+</body>
+
+</html>
